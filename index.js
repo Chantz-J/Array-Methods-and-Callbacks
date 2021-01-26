@@ -7,14 +7,24 @@ Practice accessing data by console.log-ing the following pieces of data note, yo
 
 //(a) Home Team name for 2014 world cup final
 
-//(b) Away Team name for 2014 world cup final
+const homeTeam14 = fifaData.filter(data => data.Year === 2014 && data.Stage === 'Final' ? console.log(data['Home Team Name']) : null)
+console.log(homeTeam14)
 
+//(b) Away Team name for 2014 world cup final
+const awayTeam14 = fifaData.filter(data => data.Year === 2014 && data.Stage === 'Final' ? console.log(data['Away Team Name']) : null)
+console.log(awayTeam14)
+    
 //(c) Home Team goals for 2014 world cup final
+const homeTeamGoal = fifaData.filter(data => data.Year === 2014 && data.Stage === 'Final' ? console.log(data['Home Team Goals']) : null)
+console.log(homeTeamGoal)
 
 //(d) Away Team goals for 2014 world cup final
+const awayTeamGoal = fifaData.filter(data => data.Year === 2014 && data.Stage === 'Final' ? console.log(data['Away Team Goals']) : null)
+console.log(awayTeamGoal)
 
 //(e) Winner of 2014 world cup final */
-
+const fifaWinner = fifaData.filter(data => data.Year === 2014 && data.Stage === 'Winner' ? console.log(data['Win conditions']) : null)
+console.log(fifaWinner)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
