@@ -79,13 +79,15 @@ Use the higher-order function getWinnersByYear to do the following:
 hint: the strings returned need to exactly match the string in step 4.
  */
 
-function getWinnersByYear(data, cb1, cb2) {
-    const years = cb1(data, getFinals)
-    const winners = cb2(data, getFinals)
+function getWinnersByYear(data, getYearsCB, getWinnersCB) {
+    const years = getYearsCB(data)
+    const winners = getWinnersCB(data)
 
-    return `In ${years}, ${winners} won the world cup!`
+    const winSen = years.map((y, i) => `In ${years[i]}, ${winners[i]} won the world cup!`)
+
+    return winSen
 }
-getWinners(fifaData, getYears, getWinners)
+// getWinners(fifaData, getYears, getWinners)
 
 
 
@@ -99,8 +101,8 @@ Use the higher order function getAverageGoals to do the following:
  Example of invocation: getAverageGoals(getFinals(fifaData));
 */
 
-function getAverageGoals(/* code here */) {
-   /* code here */
+function getAverageGoals(cb) {
+//    const theAverage = cb(data).reduce()
 }
 
 
